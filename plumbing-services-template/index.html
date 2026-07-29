@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowFix Plumbing - Reliable Residential & Commercial Plumbing Services</title>
+  <meta name="description" content="FlowFix Plumbing offers 24/7 emergency plumbing, pipe repair, water heater installation, leak detection, and drain cleaning across the metro area. Licensed & insured.">
+  <meta name="keywords" content="plumbing services, emergency plumber, pipe repair, water heater installation, leak detection, drain cleaning">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FlowFix Plumbing - 24/7 Emergency Plumbing Services">
+  <meta property="og:description" content="Fast, reliable residential and commercial plumbing services. Upfront pricing, licensed experts, 24/7 response.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlowFix Plumbing Services">
+  <meta name="twitter:description" content="Fast, reliable residential and commercial plumbing services.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d9488' stroke-width='2'><path d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/></svg>">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#0f172a',
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              800: '#1e293b',
+              900: '#0f172a',
+            },
+            secondary: {
+              DEFAULT: '#0d9488',
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+            },
+            emergency: {
+              DEFAULT: '#dc2626',
+              600: '#dc2626',
+              700: '#b91c1c',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "name": "FlowFix Plumbing Services",
+    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "(800) 555-0147",
+    "email": "service@flowfixplumbing.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "100 Plumbers Way, Suite 400",
+      "addressLocality": "Metro City",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "areaServed": "Metro Area (25 Miles Radius)",
+    "description": "Licensed residential and commercial plumbing company specializing in emergency repairs, leak detection, water heaters, and drain cleaning."
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Header Section (Fixed Top Navbar) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
+    <!-- Emergency Announcement Bar -->
+    <div class="bg-red-600 text-white py-2 px-4 text-center text-xs md:text-sm font-semibold flex items-center justify-center gap-2 shadow-inner">
+      <span class="inline-block w-2 h-2 rounded-full bg-white animate-ping"></span>
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>24/7 Emergency Plumbing Available Right Now — Dispatching Technicians Within 30 Mins!</span>
+      <a href="tel:8005550147" class="underline hover:text-red-100 ml-2 font-bold">(800) 555-0147</a>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none" aria-label="FlowFix Plumbing Home">
+          <div class="w-11 h-11 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-lg shadow-teal-600/30 group-hover:bg-teal-700 transition-colors">
+            <i data-lucide="wrench" class="w-6 h-6"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-none">Flow<span class="text-teal-600">Fix</span></span>
+            <span class="text-[10px] font-bold tracking-widest text-slate-500 dark:text-slate-400 uppercase leading-none mt-1">Plumbing Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-700 dark:text-slate-200">
+          <a href="index.html" class="text-teal-600 dark:text-teal-400 font-bold hover:text-teal-700 transition-colors">Home</a>
+          <a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Services</a>
+          <a href="pages/about.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">About</a>
+          <a href="pages/blog.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Blog</a>
+          <a href="pages/contact.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Controls & Header CTAs (Max 2 CTAs) -->
+        <div class="hidden lg:flex items-center space-x-3">
+          
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle dark/light mode">
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-slate-600"></i>
+          </button>
+
+          <!-- RTL Toggle Button with Suitable Icon -->
+          <button type="button" class="rtl-toggle-btn p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle LTR/RTL layout direction" title="Toggle Layout Direction (LTR/RTL)">
+            <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Secondary CTA: Emergency Call -->
+          <a href="tel:8005550147" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-red-50 text-red-700 border border-red-200 hover:bg-red-100 dark:bg-red-950/40 dark:text-red-300 dark:border-red-800 dark:hover:bg-red-900/60 font-semibold text-xs uppercase tracking-wider transition-all shadow-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-red-600"></i>
+            <span>Emergency Call</span>
+          </a>
+
+          <!-- Primary CTA: Book a Service -->
+          <a href="pages/booking.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal-600 text-white hover:bg-teal-700 font-semibold text-sm transition-all shadow-md shadow-teal-600/20 active:scale-95">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book a Service</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger & Controls -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300" aria-label="Toggle dark/light mode">
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition-colors" aria-label="Toggle LTR/RTL layout direction" title="Toggle Layout Direction (LTR/RTL)">
+            <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
+          </button>
+          <button type="button" id="mobile-menu-btn" class="p-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none" aria-expanded="false" aria-label="Toggle mobile menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-slate-950/60 z-[60] hidden backdrop-blur-sm"></div>
+  <div id="mobile-menu-drawer" class="fixed inset-y-0 right-0 w-full max-w-xs bg-white dark:bg-slate-900 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl p-6 flex flex-col justify-between hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-teal-600 flex items-center justify-center text-white">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+          </div>
+          <span class="text-xl font-bold text-slate-900 dark:text-white">Flow<span class="text-teal-600">Fix</span></span>
+        </div>
+        <button type="button" id="mobile-menu-close-btn" class="p-2 rounded-lg text-slate-500 hover:text-slate-700 dark:hover:text-white focus:outline-none" aria-label="Close mobile menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col space-y-4 font-semibold text-slate-800 dark:text-slate-200">
+        <a href="index.html" class="text-teal-600 dark:text-teal-400 py-2 border-b border-slate-100 dark:border-slate-800">Home</a>
+        <a href="pages/services.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Services</a>
+        <a href="pages/about.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">About Us</a>
+        <a href="pages/blog.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Plumbing Tips</a>
+        <a href="pages/contact.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <div class="space-y-3 pt-6 border-t border-slate-200 dark:border-slate-800">
+      <a href="tel:8005550147" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-md">
+        <i data-lucide="phone-call" class="w-4 h-4"></i>
+        Emergency Call (800) 555-0147
+      </a>
+      <a href="pages/booking.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md">
+        <i data-lucide="calendar" class="w-4 h-4"></i>
+        Book a Service
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Hero Section -->
+  <section class="relative bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300 overflow-hidden pt-36 pb-16 md:pt-44 md:pb-24 lg:pt-48 lg:pb-32 border-b border-slate-200 dark:border-slate-800">
+    <!-- Hero Background Image & Gradient Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80" alt="Professional Plumber Inspecting Pipes" class="w-full h-full object-cover opacity-15 dark:opacity-20">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-100 via-slate-100/95 to-slate-100/40 dark:from-slate-950 dark:via-slate-950/95 dark:to-transparent transition-colors duration-300"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-700 dark:text-teal-300 font-semibold text-xs uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+            Licensed & Insured Plumbing Experts
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
+            Reliable Plumbing Services When You Need Them Most
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl font-normal leading-relaxed">
+            From emergency pipe repairs to complete bathroom fitting and water heater installation, our certified technicians keep your home running smoothly with upfront pricing and guaranteed workmanship.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="pages/booking.html" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-base shadow-xl shadow-teal-600/20 transition-all hover:-translate-y-0.5">
+              <i data-lucide="calendar-check" class="w-5 h-5"></i>
+              Book a Service Online
+            </a>
+            <a href="tel:8005550147" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-base shadow-xl shadow-red-600/20 transition-all hover:-translate-y-0.5">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+              Call Emergency Plumber
+            </a>
+          </div>
+
+          <!-- Quick Feature Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-teal-100 dark:bg-slate-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Licensed Pro</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">100% Certified</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-teal-100 dark:bg-slate-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Fast Response</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Under 30 Mins</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-teal-100 dark:bg-slate-800 flex items-center justify-center text-teal-600 dark:text-teal-400">
+                <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Upfront Price</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">No Hidden Fees</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-teal-100 dark:bg-slate-800 flex items-center justify-center text-teal-400">
+                <i data-lucide="thumbs-up" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Guaranteed</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">1-Year Warranty</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Card Graphic -->
+        <div class="lg:col-span-5 relative hidden lg:block">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Plumber Fixing Sink Drain" class="w-full h-[450px] object-cover">
+            
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/80 dark:border-slate-700/60 text-slate-900 dark:text-white flex items-center justify-between shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-teal-600 flex items-center justify-center text-white">
+                  <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-white">2,500+ Jobs Completed</h4>
+                  <p class="text-xs text-slate-600 dark:text-slate-300">5-Star Customer Satisfaction Rating</p>
+                </div>
+              </div>
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section class="py-16 md:py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Our Expertise</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Comprehensive Plumbing Solutions
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base">
+          From minor faucet leaks to full commercial overhaul, our master plumbers deliver prompt, reliable service backed by industry warranties.
+        </p>
+      </div>
+
+      <!-- Services Grid (6 Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Pipe Repair -->
+        <div class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+              <i data-lucide="pipette" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Pipe Repair & Replacement</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Fast detection and repair of burst, leaking, corroded, or frozen pipes to prevent water damage and structural decay.
+            </p>
+          </div>
+          <a href="pages/service-detail.html" class="inline-flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 gap-1">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+        </div>
+
+        <!-- Card 2: Bathroom Fitting -->
+        <div class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+              <i data-lucide="bath" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bathroom Fitting</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Complete installation of showers, bathtubs, toilets, vanities, and modern chrome fixtures tailored to your layout.
+            </p>
+          </div>
+          <a href="pages/services.html" class="inline-flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 gap-1">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+        </div>
+
+        <!-- Card 3: Water Heater Installation -->
+        <div class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+              <i data-lucide="flame" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Water Heater Installation</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Tankless and traditional water heater repair, maintenance, and energy-efficient system installations for non-stop hot water.
+            </p>
+          </div>
+          <a href="pages/services.html" class="inline-flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 gap-1">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+        </div>
+
+        <!-- Card 4: Leak Detection -->
+        <div class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+              <i data-lucide="search" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Leak Detection & Repair</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Non-invasive acoustic and thermal imaging leak detection pinpointing hidden slab and wall water leaks accurately.
+            </p>
+          </div>
+          <a href="pages/services.html" class="inline-flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 gap-1">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+        </div>
+
+        <!-- Card 5: Drain Cleaning -->
+        <div class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+              <i data-lucide="droplet" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Drain & Sewer Cleaning</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              High-pressure hydro-jetting and motorized snaking to clear stubborn grease, root intrusion, and sewer line blockages.
+            </p>
+          </div>
+          <a href="pages/services.html" class="inline-flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 gap-1">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+        </div>
+
+        <!-- Card 6: Emergency Plumbing -->
+        <div class="card-hover rounded-2xl border-2 border-red-500/40 dark:border-red-600/40 bg-red-50/30 dark:bg-red-950/20 p-8 flex flex-col justify-between space-y-6 relative overflow-hidden">
+          <div class="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] uppercase tracking-widest font-extrabold px-3 py-1 rounded-bl-lg">24/7 Fast</div>
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-red-600 text-white flex items-center justify-center shadow-lg shadow-red-600/30">
+              <i data-lucide="alert-triangle" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Emergency Plumbing</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Immediate response teams available 24 hours a day, 365 days a year for overflow emergencies, gas leaks, and main line failures.
+            </p>
+          </div>
+          <a href="tel:8005550147" class="inline-flex items-center text-sm font-bold text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 gap-1">
+            <span>Call Immediate Dispatch</span>
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="pages/services.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border-2 border-slate-900 dark:border-slate-100 text-slate-900 dark:text-white font-bold text-sm hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all">
+          <span>View All Plumbing Services</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Emergency Plumbing Highlight Banner -->
+  <section class="bg-gradient-to-br from-red-700 via-red-600 to-red-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white font-bold text-xs uppercase tracking-wider border border-white/20">
+            <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+            Immediate Dispatch Available
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Plumbing Emergency? We're Ready 24/7
+          </h2>
+          <p class="text-red-100 text-base max-w-2xl">
+            Don't let a burst pipe or flooded basement ruin your property. Our fully stocked service vans are stationed across the city to arrive within 30 minutes.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4">
+          <a href="tel:8005550147" class="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-red-700 font-extrabold text-lg shadow-xl hover:bg-red-50 transition-all active:scale-95">
+            <i data-lucide="phone" class="w-6 h-6 text-red-600"></i>
+            <span>(800) 555-0147</span>
+          </a>
+          <p class="text-center text-xs text-red-200">Average On-Site Response Time: <strong class="text-white">22 Minutes</strong></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Feature Grid -->
+        <div class="lg:col-span-6 space-y-8">
+          <div class="space-y-3">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Why Homeowners Trust Us</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              The FlowFix Plumbing Standard of Excellence
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base">
+              We treat your property with the respect it deserves. No messy footprints, no hidden surcharges, just reliable plumbing done right the first time.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                <i data-lucide="user-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white">Licensed & Vetted</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Background-checked master plumbers dedicated to safety.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                <i data-lucide="badge-dollar-sign" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white">Upfront Flat Pricing</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Written estimate provided before any work commences.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                <i data-lucide="truck" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white">Fully Equipped Vans</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">95% of jobs resolved on the initial visit with parts in stock.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white">Clean Work Guarantee</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Shoe covers and drop cloths used; left cleaner than found.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Image with Stats Overlay -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" alt="Professional Plumber at Work" class="w-full h-[500px] object-cover">
+            
+            <div class="absolute top-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl max-w-[200px]">
+              <p class="text-3xl font-extrabold text-teal-600 dark:text-teal-400">15+ Years</p>
+              <p class="text-xs font-semibold text-slate-600 dark:text-slate-300 mt-1">Serving Local Homes & Businesses</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-16 md:py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Simple 4-Step Process</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          How Our Service Works
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm">Seamless service from first phone call to final sign-off.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="relative bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">1</div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Request Service</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300">Book online in 60 seconds or call our 24/7 customer hotline.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">2</div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Get Confirmation</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300">Receive technician arrival window and live dispatch tracking.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">3</div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Inspection & Quote</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300">On-site diagnosis with transparent flat-rate pricing before work begins.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">4</div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Job Completed</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300">Quality repair executed cleanly with written warranty provided.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Service Coverage Map Section -->
+  <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Coverage Area</span>
+          <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Serving Homes & Commercial Properties Across Metro Area
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            Our rapid response plumbing fleet operates across a 25-mile radius, servicing residential neighborhoods, apartment complexes, commercial offices, and industrial hubs.
+          </p>
+
+          <div class="space-y-3">
+            <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Primary Service Zones:</h4>
+            <div class="grid grid-cols-2 gap-2 text-sm text-slate-700 dark:text-slate-300">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+                <span>Downtown & Financial</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+                <span>Northside Suburbs</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+                <span>West End Heights</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+                <span>South Bay District</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+                <span>Eastside Valley</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+                <span>Commercial Zone B</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="pages/contact.html" class="inline-flex items-center gap-2 text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400">
+              <span>Check exact zip code availability</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps API Placeholder Integration Point -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-xl">
+            <!-- Map UI Container -->
+            <div class="relative w-full h-[380px] rounded-2xl bg-slate-200 dark:bg-slate-800 overflow-hidden flex flex-col items-center justify-center text-center p-6 map-placeholder">
+              <div class="w-16 h-16 rounded-full bg-teal-600/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4">
+                <i data-lucide="map" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Maps Integration Point</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm mt-1">
+                Replace this placeholder container with your Google Maps Embed API iframe or JS Maps SDK script.
+              </p>
+              <!-- Interactive ZIP code checker mock -->
+              <div class="mt-6 flex items-center max-w-xs w-full bg-white dark:bg-slate-900 rounded-xl p-1.5 border border-slate-300 dark:border-slate-700 shadow-sm">
+                <input type="text" placeholder="Enter ZIP Code..." class="w-full px-3 py-1.5 text-xs bg-transparent text-slate-900 dark:text-white focus:outline-none">
+                <button type="button" onclick="alert('Great news! We have 4 service vans active in your ZIP code area!')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-lg shrink-0">
+                  Check
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="py-16 md:py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Verified Reviews</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          What Our Customers Say
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm">Real stories from local homeowners and business owners.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-8 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 text-sm italic leading-relaxed">
+              "A pipe burst in our basement at 2:00 AM on Sunday. FlowFix had a technician at our door in 25 minutes. He shut off the main line, repaired the copper joint, and helped clean up. Lifesavers!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Robert M.</h4>
+              <p class="text-xs text-slate-500">Emergency Pipe Repair</p>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-8 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 text-sm italic leading-relaxed">
+              "We upgraded to a tankless water heater. The FlowFix team gave us a flat quote up front, completed the job in 4 hours, and explained how to use the digital controller. Highly recommend!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Sarah & David T.</h4>
+              <p class="text-xs text-slate-500">Water Heater Installation</p>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified
+            </span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 p-8 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 text-sm italic leading-relaxed">
+              "Outstanding drain snaking service. They used a camera video inspection to show me the tree root clog before hydro-jetting it clean. Professional, friendly, and honest pricing."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 dark:text-white">Elena R.</h4>
+              <p class="text-xs text-slate-500">Sewer Drain Cleaning</p>
+            </div>
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Plumbing Tips / Blog Preview Section -->
+  <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Plumbing Insights</span>
+          <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+            Expert Plumbing Advice & Tips
+          </h2>
+        </div>
+        <a href="pages/blog.html" class="inline-flex items-center gap-2 text-sm font-bold text-teal-600 hover:text-teal-700 dark:text-teal-400">
+          <span>View All Articles</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Article Card 1 -->
+        <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=600&q=80" alt="Frozen Pipe Prevention" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Winter Prep</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors">
+                <a href="pages/blog-detail.html">How to Prevent Frozen Pipes During Cold Snaps</a>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+                Essential steps to insulate outdoor spigots and protect indoor copper pipes from bursting in sub-zero weather.
+              </p>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800">
+              Published Oct 12, 2025 • 5 min read
+            </div>
+          </div>
+        </article>
+
+        <!-- Article Card 2 -->
+        <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Water Leak Detection" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Maintenance</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors">
+                <a href="pages/blog-detail.html">5 Signs Your Water Heater Needs Immediate Service</a>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+                Learn the warning signs of sediment buildup, rust-colored water, and strange rumbling sounds in your tank.
+              </p>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800">
+              Published Nov 04, 2025 • 4 min read
+            </div>
+          </div>
+        </article>
+
+        <!-- Article Card 3 -->
+        <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=600&q=80" alt="Kitchen Sink Plumbing" class="w-full h-48 object-cover">
+          <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+            <div class="space-y-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">DIY vs Pro</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors">
+                <a href="pages/blog-detail.html">Hidden Water Leaks: How to Detect Slab & Wall Leaks</a>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+                Unexplained high water bills? Here is how acoustic sensors pinpoint underground leaks before water damage spreads.
+              </p>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800">
+              Published Dec 18, 2025 • 6 min read
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Large Emergency Conversion Bottom Banner -->
+  <section class="bg-slate-900 text-white py-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto">
+        Don't Let a Plumbing Emergency Get Worse
+      </h2>
+      <p class="text-slate-300 max-w-xl mx-auto text-base">
+        Our licensed plumbers are standing by around the clock. Book your appointment online or call immediately for fast 24/7 service dispatch.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+        <a href="pages/booking.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-base shadow-xl transition-all">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          Schedule Service Online
+        </a>
+        <a href="tel:8005550147" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-base shadow-xl transition-all">
+          <i data-lucide="phone-call" class="w-5 h-5"></i>
+          Call (800) 555-0147
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-200 dark:border-slate-800">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md">
+              <i data-lucide="wrench" class="w-5 h-5"></i>
+            </div>
+            <span class="text-2xl font-extrabold text-slate-900 dark:text-white">Flow<span class="text-teal-600 dark:text-teal-500">Fix</span></span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed">
+            Reliable residential and commercial plumbing company delivering upfront pricing, fast 24/7 emergency response, and 100% satisfaction guaranteed work across the metro area.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 dark:hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 dark:hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Twitter">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 dark:hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 dark:hover:text-white flex items-center justify-center transition-colors shadow-sm" aria-label="LinkedIn">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links (Navbar Navigation) -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-teal-600"></i> Home Page</a></li>
+            <li><a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-teal-600"></i> Services</a></li>
+            <li><a href="pages/about.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-teal-600"></i> About FlowFix</a></li>
+            <li><a href="pages/blog.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-teal-600"></i> Plumbing Tips Blog</a></li>
+            <li><a href="pages/contact.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-teal-600"></i> Contact Us</a></li>
+            <li><a href="pages/booking.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-teal-600"></i> Book a Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Our Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="pages/service-detail.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="wrench" class="w-3.5 h-3.5 text-teal-600"></i> Pipe Repair & Replacement</a></li>
+            <li><a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="bath" class="w-3.5 h-3.5 text-teal-600"></i> Bathroom & Kitchen Fitting</a></li>
+            <li><a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="flame" class="w-3.5 h-3.5 text-teal-600"></i> Water Heater Installation</a></li>
+            <li><a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="search" class="w-3.5 h-3.5 text-teal-600"></i> Leak Detection & Repair</a></li>
+            <li><a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="droplet" class="w-3.5 h-3.5 text-teal-600"></i> Drain & Sewer Cleaning</a></li>
+            <li><a href="pages/services.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-red-500"></i> 24/7 Emergency Plumbing</a></li>
+          </ul>
+        </div>
+
+        <!-- Navbar Buttons & Contact Info & Hours -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Contact & Hours</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-teal-600 dark:text-teal-500 shrink-0 mt-0.5"></i>
+              <span>100 Plumbers Way, Suite 400, Metro City, NY 10001</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-red-600 dark:text-red-500 shrink-0"></i>
+              <a href="tel:8005550147" class="hover:text-teal-600 dark:hover:text-white font-bold text-slate-900 dark:text-white">(800) 555-0147 (24/7)</a>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-teal-600 dark:text-teal-500 shrink-0"></i>
+              <span>service@flowfixplumbing.com</span>
+            </div>
+            
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs">
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-500 shrink-0"></i>
+                <span class="font-bold text-slate-900 dark:text-white">Emergency:</span>
+                <span class="text-red-600 dark:text-red-400 font-semibold">24/7 / 365 Days</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="calendar" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-500 shrink-0"></i>
+                <span class="font-bold text-slate-900 dark:text-white">Office:</span>
+                <span>Mon - Sat: 7am - 8pm</span>
+              </div>
+            </div>
+
+            <!-- Navbar Action Buttons in Footer -->
+            <div class="pt-2 flex flex-col gap-2">
+              <a href="tel:8005550147" class="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                <span>Emergency Call</span>
+              </a>
+              <a href="pages/booking.html" class="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                <span>Book Service Online</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar Legal & Credits -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+        <p>© 2026 FlowFix Plumbing Services. All rights reserved.</p>
+        <div class="flex items-center justify-center gap-1.5 text-center font-medium">
+          <span>Developed by</span>
+          <span class="font-semibold text-slate-800 dark:text-slate-200">Abhivorn Technologies Pvt. Ltd.</span>
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="pages/404.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Privacy Policy</a>
+          <a href="pages/404.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Terms of Service</a>
+          <a href="pages/coming-soon.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Client Portal</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Call Button for Mobile (WCAG Touch-friendly) -->
+  <a href="tel:8005550147" class="floating-call-btn lg:hidden w-14 h-14 rounded-full bg-red-600 text-white flex items-center justify-center shadow-2xl active:scale-95" aria-label="Call Emergency Plumber">
+    <i data-lucide="phone-call" class="w-6 h-6 animate-pulse"></i>
+  </a>
+
+  <!-- Application Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
