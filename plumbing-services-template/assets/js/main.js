@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Initialize FAQ Accordions
   initAccordions();
+
+  // 7. Initialize Desktop & Mobile Dropdown Navs
+  initDropdownNav();
+
+  // 8. Initialize Home 2 Interactive Components
+  initHome2Widgets();
 });
 
 /* ==========================================================================
@@ -202,3 +208,193 @@ function initAccordions() {
     });
   });
 }
+
+/* ==========================================================================
+   Header Dropdown Nav & Mobile Accordion Submenu
+   ========================================================================== */
+function initDropdownNav() {
+  // Desktop Dropdown Toggle on Click / Touch
+  const dropdownContainers = document.querySelectorAll('.nav-dropdown');
+
+  dropdownContainers.forEach(container => {
+    const btn = container.querySelector('.nav-dropdown-btn');
+    const menu = container.querySelector('.nav-dropdown-menu');
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = menu.classList.contains('is-open');
+
+      // Close all other dropdowns
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('is-open'));
+      document.querySelectorAll('.nav-dropdown').forEach(c => c.classList.remove('is-open'));
+      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      if (!isOpen) {
+        menu.classList.add('is-open');
+        container.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Close desktop dropdowns on outside click or Escape
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('is-open'));
+    document.querySelectorAll('.nav-dropdown').forEach(c => c.classList.remove('is-open'));
+    document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('is-open'));
+      document.querySelectorAll('.nav-dropdown').forEach(c => c.classList.remove('is-open'));
+      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    }
+  });
+
+  // Mobile Submenu Accordion Handler
+  const mobileHomeToggles = document.querySelectorAll('.mobile-home-toggle');
+  mobileHomeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const sub = toggle.nextElementSibling;
+      const chevron = toggle.querySelector('.mobile-home-chevron');
+      if (!sub) return;
+
+      const isHidden = sub.classList.contains('hidden');
+      if (isHidden) {
+        sub.classList.remove('hidden');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+        toggle.setAttribute('aria-expanded', 'true');
+      } else {
+        sub.classList.add('hidden');
+        if (chevron) chevron.style.transform = 'rotate(0deg)';
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   Home 2 (Premium Edition) Interactive Widgets
+   ========================================================================== */
+function initHome2Widgets() {
+  // 1. Instant VIP Cost & Dispatch Estimator
+  const estimatorService = document.getElementById('vip-estimator-service');
+  const estimatorProperty = document.getElementById('vip-estimator-property');
+  const estimatorUrgency = document.getElementById('vip-estimator-urgency');
+  const priceDisplay = document.getElementById('vip-estimated-price');
+  const etaDisplay = document.getElementById('vip-estimated-eta');
+  const perksDisplay = document.getElementById('vip-perks-list');
+
+  function calculateEstimate() {
+    if (!estimatorService || !estimatorProperty || !estimatorUrgency || !priceDisplay) return;
+
+    const basePrices = {
+      'leak-detection': 180,
+      'luxury-bath': 350,
+      'tankless': 450,
+      'trenchless': 600,
+      'hydro-jetting': 280
+    };
+
+    const propMultipliers = {
+      'residential': 1.0,
+      'estate': 1.35,
+      'commercial': 1.6
+    };
+
+    const serviceKey = estimatorService.value || 'leak-detection';
+    const propKey = estimatorProperty.value || 'residential';
+    const urgencyKey = estimatorUrgency.value || 'standard';
+
+    const base = basePrices[serviceKey] || 200;
+    const mult = propMultipliers[propKey] || 1.0;
+    const urgencyBonus = urgencyKey === 'emergency' ? 75 : 0;
+
+    const minPrice = Math.round((base * mult) + urgencyBonus);
+    const maxPrice = Math.round(minPrice * 1.3);
+
+    priceDisplay.textContent = `$${minPrice} - $${maxPrice}`;
+
+    if (etaDisplay) {
+      if (urgencyKey === 'emergency') {
+        etaDisplay.textContent = '15 - 25 Mins (Priority Dispatch)';
+        etaDisplay.className = 'text-xs font-black text-red-600 dark:text-red-400 flex items-center gap-1';
+      } else {
+        etaDisplay.textContent = 'Same-Day Flexible Slot';
+        etaDisplay.className = 'text-xs font-black text-teal-600 dark:text-teal-300 flex items-center gap-1';
+      }
+    }
+
+    if (perksDisplay) {
+      if (propKey === 'commercial' || propKey === 'estate') {
+        perksDisplay.innerHTML = `
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-teal-50 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-500/40 text-xs font-bold">✓ Free Thermal Audit</span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-500/40 text-xs font-bold">★ VIP Priority Tech</span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/40 text-xs font-bold">✓ Zero Dispatch Fee</span>
+        `;
+      } else {
+        perksDisplay.innerHTML = `
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-teal-50 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-500/40 text-xs font-bold">✓ Upfront Fixed Quote</span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/40 text-xs font-bold">✓ Lifetime Warranty</span>
+        `;
+      }
+    }
+  }
+
+  if (estimatorService) estimatorService.addEventListener('change', calculateEstimate);
+  if (estimatorProperty) estimatorProperty.addEventListener('change', calculateEstimate);
+  if (estimatorUrgency) estimatorUrgency.addEventListener('change', calculateEstimate);
+
+  // Initial calculation trigger
+  calculateEstimate();
+
+  // 2. VIP Membership Pricing Switcher (Monthly vs Annual)
+  const billingToggle = document.getElementById('vip-billing-toggle');
+  const priceSilver = document.getElementById('price-silver');
+  const priceGold = document.getElementById('price-gold');
+  const pricePlatinum = document.getElementById('price-platinum');
+  const billingCycleLabels = document.querySelectorAll('.billing-cycle-label');
+
+  if (billingToggle) {
+    billingToggle.addEventListener('change', () => {
+      const isAnnual = billingToggle.checked;
+      if (priceSilver) priceSilver.textContent = isAnnual ? '$24' : '$29';
+      if (priceGold) priceGold.textContent = isAnnual ? '$49' : '$59';
+      if (pricePlatinum) pricePlatinum.textContent = isAnnual ? '$79' : '$99';
+
+      billingCycleLabels.forEach(label => {
+        label.textContent = isAnnual ? '/mo (billed annually)' : '/month';
+      });
+    });
+  }
+
+  // 3. Before & After Showcase Tab Switcher
+  const showcaseTabs = document.querySelectorAll('.showcase-tab-btn');
+  const showcasePanels = document.querySelectorAll('.showcase-panel');
+
+  showcaseTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      showcaseTabs.forEach(t => {
+        t.classList.remove('bg-teal-600', 'text-white', 'shadow-lg');
+        t.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      });
+      tab.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      tab.classList.add('bg-teal-600', 'text-white', 'shadow-lg');
+
+      showcasePanels.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.classList.remove('hidden');
+        } else {
+          panel.classList.add('hidden');
+        }
+      });
+    });
+  });
+}
+
