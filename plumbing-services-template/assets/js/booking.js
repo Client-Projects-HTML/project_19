@@ -195,11 +195,12 @@ function handleSuccessfulSubmission(form) {
       form.classList.add('hidden');
       successContainer.classList.remove('hidden');
       successContainer.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      alert(`Service request submitted successfully! Your Reference Code: ${refCode}`);
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
     }
+    if (typeof window.showToast === 'function') {
+      window.showToast(`Booking Confirmed! Ref: ${refCode}. Dispatch operator will contact you shortly.`);
+    }
+    form.reset();
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnText;
   }, 1200);
 }

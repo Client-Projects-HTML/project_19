@@ -29,6 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Initialize Home 2 Interactive Components
   initHome2Widgets();
+
+  // 9. Initialize Global Toast System
+  initToastSystem();
+
+  // 10. Initialize Newsletter Forms
+  initNewsletterForms();
+
+  // 11. Initialize Floating CTAs & Back-To-Top Button
+  initFloatingControls();
+
+  // 12. Initialize Blog Category Filters
+  initBlogCategoryFilters();
+
+  // 13. Initialize Social Share & Clipboard Buttons
+  initSocialShareButtons();
 });
 
 /* ==========================================================================
@@ -397,4 +412,191 @@ function initHome2Widgets() {
     });
   });
 }
+
+/* ==========================================================================
+   Global Toast Notification Utility
+   ========================================================================== */
+function initToastSystem() {
+  if (document.getElementById('flowfix-toast-container')) return;
+  const container = document.createElement('div');
+  container.id = 'flowfix-toast-container';
+  container.className = 'fixed bottom-6 right-6 z-[100] flex flex-col space-y-3 pointer-events-none max-w-sm w-full px-4';
+  document.body.appendChild(container);
+}
+
+window.showToast = function(message, type = 'success') {
+  let container = document.getElementById('flowfix-toast-container');
+  if (!container) {
+    initToastSystem();
+    container = document.getElementById('flowfix-toast-container');
+  }
+
+  const toast = document.createElement('div');
+  const bgClasses = type === 'success' 
+    ? 'bg-slate-900 dark:bg-slate-800 text-white border-teal-500' 
+    : 'bg-red-900 text-white border-red-500';
+  
+  const iconMarkup = type === 'success' 
+    ? `<div class="w-7 h-7 rounded-full bg-teal-500 text-slate-950 flex items-center justify-center font-bold text-xs shrink-0">✓</div>` 
+    : `<div class="w-7 h-7 rounded-full bg-red-500 text-white flex items-center justify-center font-bold text-xs shrink-0">!</div>`;
+
+  toast.className = `pointer-events-auto flex items-center gap-3 p-4 rounded-xl border-l-4 shadow-2xl transition-all duration-300 transform translate-y-8 opacity-0 ${bgClasses}`;
+  toast.innerHTML = `
+    ${iconMarkup}
+    <p class="text-xs font-semibold leading-relaxed flex-1">${message}</p>
+    <button type="button" class="text-slate-400 hover:text-white p-1 text-xs" onclick="this.parentElement.remove()">✕</button>
+  `;
+
+  container.appendChild(toast);
+
+  // Trigger animation
+  requestAnimationFrame(() => {
+    toast.classList.remove('translate-y-8', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+  });
+
+  // Auto disappear
+  setTimeout(() => {
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-4', 'opacity-0');
+    setTimeout(() => toast.remove(), 300);
+  }, 4500);
+};
+
+/* ==========================================================================
+   Newsletter Signup Button & Form Handlers
+   ========================================================================== */
+function initNewsletterForms() {
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    // Check if form contains an email input or newsletter button
+    const emailInput = form.querySelector('input[type="email"]');
+    const isNewsletter = form.classList.contains('newsletter-form') || (emailInput && !form.id.includes('contact') && !form.id.includes('booking'));
+
+    if (isNewsletter) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+        const emailVal = emailInput ? emailInput.value.trim() : '';
+
+        if (emailInput && !emailVal.includes('@')) {
+          window.showToast('Please enter a valid email address.', 'error');
+          return;
+        }
+
+        const originalText = submitBtn ? submitBtn.innerHTML : 'Subscribe';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span>Subscribing...</span>`;
+        }
+
+        setTimeout(() => {
+          if (emailInput) emailInput.value = '';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          }
+          window.showToast('Thank you for subscribing! Check your inbox for plumbing tips & exclusive discounts.');
+        }, 800);
+      });
+    }
+  });
+}
+
+/* ==========================================================================
+   Floating Quick Call & Smooth Back-To-Top Button
+   ========================================================================== */
+function initFloatingControls() {
+  if (document.getElementById('back-to-top-btn')) return;
+
+  const btn = document.createElement('button');
+  btn.id = 'back-to-top-btn';
+  btn.setAttribute('aria-label', 'Scroll to top');
+  btn.className = 'fixed bottom-6 left-6 z-40 p-3 rounded-full bg-slate-900/90 dark:bg-slate-800/90 text-white border border-slate-700 shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-teal-600 dark:hover:bg-teal-600 focus:outline-none';
+  btn.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>`;
+  
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+      btn.classList.remove('opacity-100', 'pointer-events-auto');
+      btn.classList.add('opacity-0', 'pointer-events-none');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ==========================================================================
+   Blog Category Filter Buttons
+   ========================================================================== */
+function initBlogCategoryFilters() {
+  const filterBtns = document.querySelectorAll('.blog-filter-btn');
+  const blogCards = document.querySelectorAll('article.card-hover');
+
+  if (!filterBtns.length || !blogCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+
+      // Update button styling
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-teal-600', 'text-white', 'shadow-md');
+        b.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      });
+      btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+      btn.classList.add('bg-teal-600', 'text-white', 'shadow-md');
+
+      // Filter articles
+      blogCards.forEach(card => {
+        const cardCategoryAttr = card.getAttribute('data-category') || '';
+        const cardCategoryText = card.querySelector('span')?.textContent || '';
+        const combinedCategory = `${cardCategoryAttr} ${cardCategoryText}`.toLowerCase();
+        
+        if (category === 'all' || combinedCategory.includes(category.toLowerCase())) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================================================
+   Social Share & Copy Link Buttons
+   ========================================================================== */
+function initSocialShareButtons() {
+  const shareBtns = document.querySelectorAll('.share-btn');
+  shareBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const platform = btn.getAttribute('data-platform');
+      const currentUrl = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title);
+
+      if (platform === 'copy' || btn.classList.contains('copy-btn')) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          window.showToast('Article link copied to clipboard!');
+        }).catch(() => {
+          window.showToast('Article link copied!');
+        });
+      } else if (platform === 'facebook') {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank', 'width=600,height=400');
+      } else if (platform === 'twitter') {
+        window.open(`https://twitter.com/intent/tweet?url=${currentUrl}&text=${title}`, '_blank', 'width=600,height=400');
+      } else if (platform === 'linkedin') {
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`, '_blank', 'width=600,height=400');
+      }
+    });
+  });
+}
+
 

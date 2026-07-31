@@ -110,11 +110,12 @@ function handleContactSubmission(form) {
     if (successBox) {
       form.classList.add('hidden');
       successBox.classList.remove('hidden');
-    } else {
-      alert('Thank you for contacting FlowFix Plumbing. We will respond within 30 minutes!');
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
     }
+    if (typeof window.showToast === 'function') {
+      window.showToast('Message sent successfully! Our dispatch operator will call you back within 15 minutes.');
+    }
+    form.reset();
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnText;
   }, 1000);
 }
