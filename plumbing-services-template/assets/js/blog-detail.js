@@ -300,7 +300,7 @@ function loadBlogDetails() {
   const contentEl = document.getElementById('blog-content-body');
   if (contentEl) {
     contentEl.innerHTML = `
-      <img src="${post.image}" alt="${post.imageAlt || post.title}" class="w-full h-[350px] md:h-[450px] object-cover rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg mb-6">
+      <img src="${post.image}" alt="${post.imageAlt || post.title}" class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover object-top rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg mb-6">
       ${post.content}
     `;
   }

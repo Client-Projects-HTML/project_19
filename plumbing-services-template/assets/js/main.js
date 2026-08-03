@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 13. Initialize Social Share & Clipboard Buttons
   initSocialShareButtons();
+
+  // 14. Initialize Global Blog Card Clickability
+  initBlogCardClickability();
 });
 
 /* ==========================================================================
@@ -599,4 +602,49 @@ function initSocialShareButtons() {
   });
 }
 
+/* ==========================================================================
+   Global Blog Card Clickability Handler
+   ========================================================================== */
+function initBlogCardClickability() {
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('article.card-hover');
+    if (!card) return;
+
+    // If the click was directly on an interactive button or direct anchor tag, let browser handle it
+    if (e.target.closest('button, input, select, textarea')) return;
+    if (e.target.tagName.toLowerCase() === 'a' && e.target.href) return;
+
+    // Find any blog detail link within the card
+    const blogLink = card.querySelector('a[href*="blog-detail.html"]');
+  });
+}
+
+/* ==========================================================================
+   Interactive Service Area ZIP Code Checker
+   ========================================================================== */
+window.checkServiceZipCode = function() {
+  const input = document.getElementById('map-zip-input');
+  const resultEl = document.getElementById('map-zip-result');
+  if (!input) return;
+
+  const zip = input.value.trim();
+  if (!zip) {
+    if (resultEl) {
+      resultEl.innerHTML = `<span class="text-amber-500 font-bold">Please enter a 5-digit ZIP code.</span>`;
+    }
+    return;
+  }
+
+  // Simulate active dispatch check
+  const randomVans = Math.floor(Math.random() * 4) + 3;
+  const responseMinutes = Math.floor(Math.random() * 15) + 20;
+
+  if (resultEl) {
+    resultEl.innerHTML = `<span class="text-emerald-500 font-bold">✓ ZIP ${zip} Covered! ${randomVans} plumbing units active (${responseMinutes}-min dispatch).</span>`;
+  }
+
+  if (window.showToast) {
+    window.showToast(`ZIP Code ${zip} verified! ${randomVans} technicians active in your area.`, 'success');
+  }
+};
 

@@ -230,7 +230,7 @@
           <button type="button" class="mobile-home-toggle w-full flex items-center justify-between py-2 text-teal-600 dark:text-teal-400 font-bold focus:outline-none" aria-expanded="true">
             <span class="flex items-center gap-2">
               <i data-lucide="home" class="w-4 h-4"></i>
-              Home Versions
+              Home
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200 mobile-home-chevron"></i>
           </button>
@@ -246,9 +246,9 @@
           </div>
         </div>
 
-        <a href="pages/about.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">About Us</a>
+        <a href="pages/about.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">About</a>
         <a href="pages/services.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Services</a>
-        <a href="pages/blog.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Plumbing Tips</a>
+        <a href="pages/blog.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Blog</a>
         <a href="pages/contact.html" class="hover:text-teal-600 py-2 border-b border-slate-100 dark:border-slate-800 transition-colors">Contact</a>
       </nav>
     </div>
@@ -724,24 +724,37 @@
           </div>
         </div>
 
-        <!-- Google Maps API Placeholder Integration Point -->
+        <!-- Embedded Live Google Map & ZIP Code Checker -->
         <div class="lg:col-span-7">
           <div class="rounded-3xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-xl">
-            <!-- Map UI Container -->
-            <div class="relative w-full h-[380px] rounded-2xl bg-slate-200 dark:bg-slate-800 overflow-hidden flex flex-col items-center justify-center text-center p-6 map-placeholder">
-              <div class="w-16 h-16 rounded-full bg-teal-600/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4">
-                <i data-lucide="map" class="w-8 h-8"></i>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Maps Integration Point</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm mt-1">
-                Replace this placeholder container with your Google Maps Embed API iframe or JS Maps SDK script.
-              </p>
-              <!-- Interactive ZIP code checker mock -->
-              <div class="mt-6 flex items-center max-w-xs w-full bg-white dark:bg-slate-900 rounded-xl p-1.5 border border-slate-300 dark:border-slate-700 shadow-sm">
-                <input type="text" placeholder="Enter ZIP Code..." class="w-full px-3 py-1.5 text-xs bg-transparent text-slate-900 dark:text-white focus:outline-none">
-                <button type="button" onclick="alert('Great news! We have 4 service vans active in your ZIP code area!')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-lg shrink-0">
-                  Check
-                </button>
+            <div class="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-inner border border-slate-200 dark:border-slate-800">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2543635164!2d-74.11976373946229!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                class="w-full h-full border-0 filter dark:contrast-125 dark:hue-rotate-180 dark:invert transition-all duration-300" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" 
+                title="FlowFix Plumbing Service Area Map">
+              </iframe>
+              
+              <!-- Interactive ZIP Code Checker Floating Overlay -->
+              <div class="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-xs bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Service Coverage
+                  </span>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400">24/7 Active</span>
+                </div>
+                <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl p-1 border border-slate-200 dark:border-slate-700">
+                  <input type="text" id="map-zip-input" placeholder="Enter ZIP Code (e.g. 10001)..." class="w-full px-3 py-1.5 text-xs bg-transparent text-slate-900 dark:text-white focus:outline-none">
+                  <button type="button" id="map-zip-btn" onclick="checkServiceZipCode()" class="px-3.5 py-1.5 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-lg shrink-0 transition-colors shadow-md">
+                    Check
+                  </button>
+                </div>
+                <p id="map-zip-result" class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 text-center">
+                  Instant dispatch within 30 mins in covered areas.
+                </p>
               </div>
             </div>
           </div>
@@ -847,10 +860,10 @@
   </section>
 
   <!-- Plumbing Tips / Blog Preview Section -->
-  <section class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+  <section class="py-8 md:py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
         <div>
           <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Plumbing Insights</span>
           <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
@@ -866,58 +879,73 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Article Card 1 -->
-        <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="assets/images/pipe-repair-user.png" alt="Frozen Pipe Prevention" class="w-full h-48 object-cover">
+        <article onclick="window.location.href='pages/blog-detail.html?id=prevent-frozen-pipes'" class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-48">
+            <img src="assets/images/pipe-repair-user.png" alt="How to Prevent Frozen Pipes During Cold Snaps" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-3 left-3 bg-teal-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Winter Prep</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Winter Prep</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors">
-                <a href="pages/blog-detail.html?id=prevent-frozen-pipes">How to Prevent Frozen Pipes During Cold Snaps</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
+                <a href="pages/blog-detail.html?id=prevent-frozen-pipes" class="focus:outline-none">How to Prevent Frozen Pipes During Cold Snaps</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                 Essential steps to insulate outdoor spigots and protect indoor copper pipes from bursting in sub-zero weather.
               </p>
             </div>
-            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800">
-              Published Oct 12, 2025 • 5 min read
+            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span>Oct 12, 2025 • 5 min read</span>
+              <span class="inline-flex items-center gap-1 font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">
+                Read Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
             </div>
           </div>
         </article>
 
         <!-- Article Card 2 -->
-        <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="assets/images/water-heater-user.png" alt="Water Leak Detection" class="w-full h-48 object-cover">
+        <article onclick="window.location.href='pages/blog-detail.html?id=water-heater-repair-signs'" class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-48">
+            <img src="assets/images/water-heater-user.png" alt="5 Signs Your Water Heater Needs Immediate Service" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-3 left-3 bg-amber-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Maintenance</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Maintenance</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors">
-                <a href="pages/blog-detail.html?id=water-heater-repair-signs">5 Signs Your Water Heater Needs Immediate Service</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
+                <a href="pages/blog-detail.html?id=water-heater-repair-signs" class="focus:outline-none">5 Signs Your Water Heater Needs Immediate Service</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                 Learn the warning signs of sediment buildup, rust-colored water, and strange rumbling sounds in your tank.
               </p>
             </div>
-            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800">
-              Published Nov 04, 2025 • 4 min read
+            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span>Nov 04, 2025 • 4 min read</span>
+              <span class="inline-flex items-center gap-1 font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">
+                Read Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
             </div>
           </div>
         </article>
 
         <!-- Article Card 3 -->
-        <article class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="assets/images/leak-detection-user.jpg" alt="Kitchen Sink Plumbing" class="w-full h-48 object-cover">
+        <article onclick="window.location.href='pages/blog-detail.html?id=hidden-leak-detection'" class="card-hover bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-48">
+            <img src="assets/images/leak-detection-user.jpg" alt="Hidden Water Leaks: How to Detect Slab & Wall Leaks" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-3 left-3 bg-indigo-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">DIY vs Pro</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">DIY vs Pro</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors">
-                <a href="pages/blog-detail.html?id=hidden-leak-detection">Hidden Water Leaks: How to Detect Slab & Wall Leaks</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
+                <a href="pages/blog-detail.html?id=hidden-leak-detection" class="focus:outline-none">Hidden Water Leaks: How to Detect Slab & Wall Leaks</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
                 Unexplained high water bills? Here is how acoustic sensors pinpoint underground leaks before water damage spreads.
               </p>
             </div>
-            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800">
-              Published Dec 18, 2025 • 6 min read
+            <div class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span>Dec 18, 2025 • 6 min read</span>
+              <span class="inline-flex items-center gap-1 font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">
+                Read Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
             </div>
           </div>
         </article>
@@ -1059,15 +1087,9 @@
       <!-- Bottom Bar Legal & Credits -->
       <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
         <p>© 2026 FlowFix Plumbing Services. All rights reserved.</p>
-        <div class="flex items-center justify-center gap-1.5 text-center font-medium">
+        <div class="flex items-center justify-end gap-1.5 text-right font-medium">
           <span>Developed by</span>
           <span class="font-semibold text-slate-800 dark:text-slate-200">Abhivorn Technologies Pvt. Ltd.</span>
-        </div>
-        <div class="flex items-center space-x-6 rtl:space-x-reverse">
-          <a href="pages/404.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Privacy Policy</a>
-          <a href="pages/404.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Terms of Service</a>
-          <a href="pages/coming-soon.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Client Portal</a>
-          <a href="pages/coming-soon.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Franchise Info</a>
         </div>
       </div>
 

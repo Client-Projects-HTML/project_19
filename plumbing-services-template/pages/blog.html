@@ -141,7 +141,7 @@
           <button type="button" class="mobile-home-toggle w-full flex items-center justify-between py-2 text-slate-800 dark:text-slate-200 font-semibold focus:outline-none" aria-expanded="false">
             <span class="flex items-center gap-2">
               <i data-lucide="home" class="w-4 h-4 text-teal-600"></i>
-              Home Versions
+              Home
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform duration-200 mobile-home-chevron"></i>
           </button>
@@ -156,9 +156,9 @@
             </a>
           </div>
         </div>
-        <a href="about.html" class="py-2">About Us</a>
+        <a href="about.html" class="py-2">About</a>
         <a href="services.html" class="py-2">Services</a>
-        <a href="blog.html" class="text-teal-600 py-2">Plumbing Tips</a>
+        <a href="blog.html" class="text-teal-600 py-2">Blog</a>
         <a href="contact.html" class="py-2">Contact</a>
       </nav>
     </div>
@@ -169,51 +169,51 @@
   </div>
 
   <!-- Main Blog Grid Section -->
-  <section class="pt-24 md:pt-28 pb-10 md:pb-12 bg-white dark:bg-slate-900">
+  <section class="pt-28 md:pt-36 pb-10 md:pb-14 bg-white dark:bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Featured Post Banner -->
       <div class="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 mb-8 shadow-xl grid grid-cols-1 lg:grid-cols-12">
         <div class="lg:col-span-7">
-          <img src="../assets/images/leak-detection-user.jpg" alt="Hidden Thermal Leak Detection Guide" class="w-full h-[280px] sm:h-[320px] lg:h-full object-cover">
+          <img src="../assets/images/leak-detection-user.jpg" alt="Hidden Thermal Leak Detection Guide" class="w-full h-[250px] sm:h-[320px] lg:h-full object-cover object-top">
         </div>
-        <div class="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-between space-y-4">
-          <div class="space-y-4">
+        <div class="lg:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
             <span class="inline-block px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400 font-bold text-xs uppercase tracking-wider">Featured Guide</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">
               <a href="blog-detail.html?id=hidden-leak-detection" class="hover:text-teal-600 transition-colors">How to Detect a Hidden Water Leak Before It Destroys Your Home</a>
             </h2>
-            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed line-clamp-3">
               Hidden slab and wall leaks cause thousands in structural damage before becoming visible. Learn the early acoustic and meter signs to protect your property.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2">
             <span class="text-xs text-slate-400">Dec 18, 2025 • 6 min read</span>
-            <a href="blog-detail.html?id=hidden-leak-detection" class="inline-flex items-center gap-1 text-sm font-bold text-teal-600 dark:text-teal-400">
-              Read Article <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+            <a href="blog-detail.html?id=hidden-leak-detection" class="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-700">
+              <span>Read Article</span> <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Category Filter Pills -->
-      <div class="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
-        <button type="button" class="blog-filter-btn px-4 py-2 rounded-xl bg-teal-600 text-white font-bold text-xs shadow-md transition-all" data-category="all">
+      <!-- Category Filter Pills (Horizontal scrollable on mobile for clean alignment) -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-8 border-b border-slate-200 dark:border-slate-800 scroll-smooth">
+        <button type="button" class="blog-filter-btn shrink-0 px-4 py-2 rounded-xl bg-teal-600 text-white font-bold text-xs shadow-md transition-all" data-category="all">
           All Guides
         </button>
-        <button type="button" class="blog-filter-btn px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="leak">
+        <button type="button" class="blog-filter-btn shrink-0 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="leak">
           Leak Detection
         </button>
-        <button type="button" class="blog-filter-btn px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="water">
+        <button type="button" class="blog-filter-btn shrink-0 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="water">
           Water Heaters
         </button>
-        <button type="button" class="blog-filter-btn px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="winter">
+        <button type="button" class="blog-filter-btn shrink-0 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="winter">
           Winterization
         </button>
-        <button type="button" class="blog-filter-btn px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="emergency">
+        <button type="button" class="blog-filter-btn shrink-0 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="emergency">
           Emergency Tips
         </button>
-        <button type="button" class="blog-filter-btn px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="drain">
+        <button type="button" class="blog-filter-btn shrink-0 px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-teal-600 hover:text-white transition-all" data-category="drain">
           Drain Maintenance
         </button>
       </div>
@@ -222,101 +222,111 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- Post 1 -->
-        <article data-category="winter" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="../assets/images/pipe-repair-user.png" alt="Prevent Frozen & Broken Pipes" class="w-full h-52 object-cover">
+        <article onclick="window.location.href='blog-detail.html?id=prevent-frozen-pipes'" data-category="winter" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-52">
+            <img src="../assets/images/pipe-repair-user.png" alt="Prevent Frozen & Broken Pipes" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-teal-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Winterization</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-xs font-bold uppercase text-teal-600 dark:text-teal-400">Winterization</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-                <a href="blog-detail.html?id=prevent-frozen-pipes" class="hover:text-teal-600 transition-colors">How to Prevent Frozen Pipes During Cold Snaps</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <a href="blog-detail.html?id=prevent-frozen-pipes" class="focus:outline-none">How to Prevent Frozen Pipes During Cold Snaps</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
                 Simple steps to insulate outdoor spigots, bleed garden hoses, and keep indoor copper lines warm when temperatures plummet below freezing.
               </p>
             </div>
             <div class="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
               <span>Oct 12, 2025</span>
-              <a href="blog-detail.html?id=prevent-frozen-pipes" class="font-bold text-teal-600 dark:text-teal-400">Read More →</a>
+              <span class="font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">Read More →</span>
             </div>
           </div>
         </article>
 
         <!-- Post 2 -->
-        <article data-category="water" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="../assets/images/water-heater-user.png" alt="Water Heater Repair & Tankless Installation" class="w-full h-52 object-cover">
+        <article onclick="window.location.href='blog-detail.html?id=water-heater-repair-signs'" data-category="water" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-52">
+            <img src="../assets/images/water-heater-user.png" alt="Water Heater Repair & Tankless Installation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-amber-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Water Heaters</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-xs font-bold uppercase text-teal-600 dark:text-teal-400">Water Heaters</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-                <a href="blog-detail.html?id=water-heater-repair-signs" class="hover:text-teal-600 transition-colors">Signs Your Water Heater Needs Repair or Replacement</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <a href="blog-detail.html?id=water-heater-repair-signs" class="focus:outline-none">Signs Your Water Heater Needs Repair or Replacement</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
                 Is your water heater rumbling or producing rusty tap water? Discover whether flushing the tank or upgrading to tankless makes financial sense.
               </p>
             </div>
             <div class="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
               <span>Nov 04, 2025</span>
-              <a href="blog-detail.html?id=water-heater-repair-signs" class="font-bold text-teal-600 dark:text-teal-400">Read More →</a>
+              <span class="font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">Read More →</span>
             </div>
           </div>
         </article>
 
         <!-- Post 3 -->
-        <article data-category="leak" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="../assets/images/leak-detection-user.jpg" alt="Detect Hidden Leak" class="w-full h-52 object-cover">
+        <article onclick="window.location.href='blog-detail.html?id=hidden-leak-detection'" data-category="leak" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-52">
+            <img src="../assets/images/leak-detection-user.jpg" alt="Detect Hidden Leak" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-indigo-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Leak Detection</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-xs font-bold uppercase text-teal-600 dark:text-teal-400">Leak Detection</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-                <a href="blog-detail.html?id=hidden-leak-detection" class="hover:text-teal-600 transition-colors">How to Detect a Hidden Water Leak in Walls & Slabs</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <a href="blog-detail.html?id=hidden-leak-detection" class="focus:outline-none">How to Detect a Hidden Water Leak in Walls & Slabs</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
                 Acoustic frequency locators and infrared cameras pinpoint leaks behind drywall without destructive demolition.
               </p>
             </div>
             <div class="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
               <span>Dec 18, 2025</span>
-              <a href="blog-detail.html?id=hidden-leak-detection" class="font-bold text-teal-600 dark:text-teal-400">Read More →</a>
+              <span class="font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">Read More →</span>
             </div>
           </div>
         </article>
 
         <!-- Post 4 -->
-        <article data-category="emergency" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="../assets/images/hero-plumber-user.png" alt="Emergency Plumber Call" class="w-full h-52 object-cover">
+        <article onclick="window.location.href='blog-detail.html?id=emergency-plumber-guide'" data-category="emergency" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-52">
+            <img src="../assets/images/hero-plumber-user.png" alt="Emergency Plumber Call" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-red-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Emergency</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-xs font-bold uppercase text-red-600 dark:text-red-400">Emergency</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-                <a href="blog-detail.html?id=emergency-plumber-guide" class="hover:text-teal-600 transition-colors">When to Call an Emergency Plumber Immediately</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <a href="blog-detail.html?id=emergency-plumber-guide" class="focus:outline-none">When to Call an Emergency Plumber Immediately</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed">
                 Learn the difference between a minor dripping faucet and a major sewage backup or main line shutoff situation requiring immediate dispatch.
               </p>
             </div>
             <div class="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
               <span>Jan 08, 2026</span>
-              <a href="blog-detail.html?id=emergency-plumber-guide" class="font-bold text-teal-600 dark:text-teal-400">Read More →</a>
+              <span class="font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">Read More →</span>
             </div>
           </div>
         </article>
 
         <!-- Post 5 -->
-        <article data-category="drain" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
-          <img src="../assets/images/drain-cleaning-user.jpg" alt="Drain Maintenance Tips" class="w-full h-52 object-cover">
+        <article onclick="window.location.href='blog-detail.html?id=drain-maintenance-tips'" data-category="drain" class="card-hover bg-slate-50/50 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col cursor-pointer group hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl">
+          <div class="overflow-hidden relative h-52">
+            <img src="../assets/images/drain-cleaning-user.jpg" alt="Drain Maintenance Tips" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-teal-600/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider backdrop-blur-sm shadow-md">Drain Maintenance</span>
+          </div>
           <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
             <div class="space-y-2">
-              <span class="text-xs font-bold uppercase text-teal-600 dark:text-teal-400">Drain Maintenance</span>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-                <a href="blog-detail.html?id=drain-maintenance-tips" class="hover:text-teal-600 transition-colors">Simple Drain Maintenance Tips Every Homeowner Should Know</a>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <a href="blog-detail.html?id=drain-maintenance-tips" class="focus:outline-none">Simple Drain Maintenance Tips Every Homeowner Should Know</a>
               </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3">
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
                 Avoid chemical drain cleaners that eat through copper pipes. Try natural baking soda flushes and drain strainers instead.
               </p>
             </div>
             <div class="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
               <span>Jan 20, 2026</span>
-              <a href="blog-detail.html?id=drain-maintenance-tips" class="font-bold text-teal-600 dark:text-teal-400">Read More →</a>
+              <span class="font-bold text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform">Read More →</span>
             </div>
           </div>
         </article>
@@ -436,15 +446,9 @@
       <!-- Bottom Bar Legal & Credits -->
       <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
         <p>© 2026 FlowFix Plumbing Services. All rights reserved.</p>
-        <div class="flex items-center justify-center gap-1.5 text-center font-medium">
+        <div class="flex items-center justify-end gap-1.5 text-right font-medium">
           <span>Developed by</span>
           <span class="font-semibold text-slate-800 dark:text-slate-200">Abhivorn Technologies Pvt. Ltd.</span>
-        </div>
-        <div class="flex items-center space-x-6 rtl:space-x-reverse">
-          <a href="404.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Privacy Policy</a>
-          <a href="404.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Terms of Service</a>
-          <a href="coming-soon.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Client Portal</a>
-          <a href="coming-soon.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Franchise Info</a>
         </div>
       </div>
 
