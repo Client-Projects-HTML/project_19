@@ -18,7 +18,7 @@ const BLOG_POSTS = {
         Water leaks inside walls or beneath concrete slab foundations are among the most insidious problems a property owner can face. Left undetected, even a minor pinhole leak dripping just half a gallon a minute can erode subfloor soil, rot wooden joists, and foster hazardous black mold colonies.
       </p>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">1. The Municipal Water Meter Test</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">1. The Municipal Water Meter Test</h2>
       <p>
         The quickest way to verify whether water is leaking anywhere in your plumbing system is by performing a simple municipal water meter test:
       </p>
@@ -38,7 +38,7 @@ const BLOG_POSTS = {
         </p>
       </div>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">2. How Acoustic & Thermal Locators Work</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">2. How Acoustic & Thermal Locators Work</h2>
       <p>
         In the past, plumbers had to chop up concrete slabs or break down drywalls just to guess where a leak was originating. Today, master plumbers at FlowFix use ground microphones and thermal infrared cameras to pinpoint water vibration frequencies without breaking a single tile.
       </p>
@@ -48,7 +48,7 @@ const BLOG_POSTS = {
         <p class="text-xs text-slate-300 max-w-md mx-auto">
           Get a non-invasive acoustic leak diagnostic scan from our certified plumbers. Flat-rate pricing with immediate dispatch.
         </p>
-        <div class="flex justify-center gap-4 pt-2">
+        <div class="flex justify-center flex-wrap gap-3 pt-2">
           <a href="booking.html?service=leak-detection" class="px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs">Book Leak Scan</a>
           <a href="tel:8005550147" class="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs">Call (800) 555-0147</a>
         </div>
@@ -70,7 +70,7 @@ const BLOG_POSTS = {
         When sub-zero arctic blasts sweep through, uninsulated copper and PEX pipes can freeze in just a few hours. Water expands as it freezes, exerting upwards of 2,000 PSI of internal hydraulic pressure against pipe walls until joints snap open.
       </p>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">1. Outdoor Hose Bibs & Outdoor Spigots</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">1. Outdoor Hose Bibs & Outdoor Spigots</h2>
       <p>
         Water trapped inside garden hoses connected to outdoor spigots is the number one cause of winter pipe bursts. Follow these 3 steps before the first freeze:
       </p>
@@ -89,7 +89,7 @@ const BLOG_POSTS = {
         </p>
       </div>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">2. Insulating Attic & Crawlspace Pipes</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">2. Insulating Attic & Crawlspace Pipes</h2>
       <p>
         Pipes running through unheated spaces such as basements, attics, garages, or crawlspaces should be fitted with tubular foam insulation sleeves or self-regulating electric heat trace cables.
       </p>
@@ -99,7 +99,7 @@ const BLOG_POSTS = {
         <p class="text-xs text-slate-300 max-w-md mx-auto">
           Our 24/7 mobile units carry specialized pipe thawing machines and burst pipe replacement kits.
         </p>
-        <div class="flex justify-center gap-4 pt-2">
+        <div class="flex justify-center flex-wrap gap-3 pt-2">
           <a href="booking.html?service=pipe-repair" class="px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs">Schedule Winterization</a>
           <a href="tel:8005550147" class="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs">Call Emergency Plumber</a>
         </div>
@@ -121,7 +121,7 @@ const BLOG_POSTS = {
         Your water heater works quietly behind the scenes every single day. However, standard tank water heaters have a typical lifespan of 8 to 12 years. Knowing the warning signs of impending tank failure can save you thousands in water damage.
       </p>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">1. Rumbling & Popping Noises</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">1. Rumbling & Popping Noises</h2>
       <p>
         As water heaters age, dissolved hard water minerals solidify into a thick crust of sediment at the bottom of the tank. As the heating element warms the water trapped under this crust, steam bubbles pop violently, causing loud rumbling noises.
       </p>
@@ -135,7 +135,7 @@ const BLOG_POSTS = {
         </p>
       </div>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">2. Tankless vs. Tank Replacement</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">2. Tankless vs. Tank Replacement</h2>
       <p>
         If your unit is older than 10 years and experiencing leaks, upgrading to a continuous tankless water heater offers up to 40% energy savings, takes up 80% less wall space, and provides endless hot water on demand.
       </p>
@@ -145,7 +145,7 @@ const BLOG_POSTS = {
         <p class="text-xs text-slate-300 max-w-md mx-auto">
           Same-day water heater replacement with upfront pricing and lifetime workmanship warranty.
         </p>
-        <div class="flex justify-center gap-4 pt-2">
+        <div class="flex justify-center flex-wrap gap-3 pt-2">
           <a href="booking.html?service=water-heater" class="px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs">Book Water Heater Quote</a>
           <a href="tel:8005550147" class="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs">Call (800) 555-0147</a>
         </div>
@@ -167,7 +167,7 @@ const BLOG_POSTS = {
         Not all plumbing issues require middle-of-the-night emergency rates. A slow-draining sink can wait until morning, but a burst main supply line pouring water into your electrical panel demands 30-minute rapid dispatch.
       </p>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">The 4 True Plumbing Emergencies</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">The 4 True Plumbing Emergencies</h2>
       <ul class="list-disc pl-6 space-y-3 text-sm">
         <li><strong>Main Line Pipe Burst:</strong> High-pressure water escaping into walls, basements, or subflooring causing structural collapse risk.</li>
         <li><strong>Sewer Line Backup:</strong> Raw sewage backing up through basement floor drains or shower basins, creating biohazard health risks.</li>
@@ -189,7 +189,7 @@ const BLOG_POSTS = {
         <p class="text-xs text-red-100 max-w-md mx-auto">
           Licensed master plumbers dispatching within 30 minutes across the metro area. Zero hidden fees.
         </p>
-        <div class="flex justify-center gap-4 pt-2">
+        <div class="flex justify-center flex-wrap gap-3 pt-2">
           <a href="tel:8005550147" class="px-8 py-3 rounded-xl bg-white text-red-950 font-black text-xs hover:bg-slate-100">Call Dispatch Now (800) 555-0147</a>
         </div>
       </div>
@@ -210,12 +210,12 @@ const BLOG_POSTS = {
         Preventative drain maintenance is the single most effective way to prevent costly main sewer backups, foul odors, and bathtub standing water.
       </p>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">1. Stop Chemical Drain Cleaners</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">1. Stop Chemical Drain Cleaners</h2>
       <p>
         Store-bought chemical drain openers rely on harsh sodium hydroxide or sulfuric acid. These chemicals generate intense heat inside your pipes that warps PVC joints, corrodes copper, and turns grease into a rock-hard soap plug.
       </p>
 
-      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-5">2. The Monthly Baking Soda & Vinegar Flush</h2>
+      <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-6 mb-3 leading-snug">2. The Monthly Baking Soda & Vinegar Flush</h2>
       <p>
         Keep your kitchen and bathroom drains fresh naturally:
       </p>
@@ -230,7 +230,7 @@ const BLOG_POSTS = {
         <p class="text-xs text-slate-300 max-w-md mx-auto">
           Our 4,000 PSI hydro-jetting strips grease and root intrusion clean back to factory inner diameter.
         </p>
-        <div class="flex justify-center gap-4 pt-2">
+        <div class="flex justify-center flex-wrap gap-3 pt-2">
           <a href="booking.html?service=drain-cleaning" class="px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs">Book Hydro-Jetting</a>
           <a href="tel:8005550147" class="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs">Call (800) 555-0147</a>
         </div>

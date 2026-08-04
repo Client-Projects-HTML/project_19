@@ -32,11 +32,11 @@
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
     <!-- Emergency Announcement Bar -->
-    <div class="bg-red-600 text-white py-2 px-4 text-center text-xs md:text-sm font-semibold flex items-center justify-center gap-2 shadow-inner">
-      <span class="inline-block w-2 h-2 rounded-full bg-white animate-ping"></span>
-      <i data-lucide="phone-call" class="w-4 h-4"></i>
+    <div class="bg-red-600 text-white py-2 px-4 text-center text-xs md:text-sm font-semibold flex flex-wrap items-center justify-center gap-1.5 md:gap-2 shadow-inner">
+      <span class="inline-block w-2 h-2 rounded-full bg-white animate-ping shrink-0"></span>
+      <i data-lucide="phone-call" class="w-4 h-4 shrink-0"></i>
       <span>24/7 Emergency Plumbing Available Right Now — Dispatching Technicians Within 30 Mins!</span>
-      <a href="tel:8005550147" class="underline hover:text-red-100 ml-2 font-bold">(800) 555-0147</a>
+      <a href="tel:8005550147" class="underline hover:text-red-100 ml-1 font-bold shrink-0">(800) 555-0147</a>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,9 +168,26 @@
     </div>
   </div>
 
-  <!-- Article Body Section -->
-  <article class="pt-28 md:pt-36 pb-10 md:pb-14 bg-white dark:bg-slate-900">
+  <!-- Main Article Section -->
+  <article class="pt-36 sm:pt-40 md:pt-44 pb-14 md:pb-20 bg-slate-50 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Article Header -->
+      <div class="space-y-4 max-w-4xl mb-6">
+        <div>
+          <span id="blog-category-tag" class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400 bg-teal-100 dark:bg-teal-950/80 border border-teal-200 dark:border-teal-800 px-3.5 py-1.5 rounded-full inline-block">
+          </span>
+        </div>
+        
+        <h1 id="blog-main-title" class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-snug sm:leading-tight">
+        </h1>
+        
+        <!-- Author, Date & Read Time -->
+        <div id="blog-meta-info" class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400 pt-3 border-t border-slate-200 dark:border-slate-800/60">
+        </div>
+      </div>
+
+      <!-- Article Content (Image & Text) -->
       <div id="blog-content-body" class="space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
         
         <img src="../assets/images/leak-detection-user.jpg" alt="Plumber using acoustic leak detector" class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover object-top rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg mb-6">
