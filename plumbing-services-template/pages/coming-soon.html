@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coming Soon | FlowFix Plumbing</title>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d9488'/><path d='M19.7 11.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l2.77-2.77a4.5 4.5 0 0 1-6.04 6.04l-5.41 5.41a1.8 1.8 0 0 1-2.55-2.55l5.41-5.41a4.5 4.5 0 0 1 6.04-6.04l-2.77 2.77z' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -28,54 +32,58 @@
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-white min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
 
-  <!-- Theme & RTL Toggles Floating Top Right -->
-  <div class="fixed top-6 right-6 flex items-center gap-2">
-    <button type="button" class="theme-toggle-btn p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-md" aria-label="Toggle theme">
-      <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-amber-400"></i>
-      <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-slate-600"></i>
-    </button>
-    <button type="button" class="rtl-toggle-btn p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-md" aria-label="Toggle LTR/RTL layout direction" title="Toggle Layout Direction (LTR/RTL)">
-      <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
-    </button>
-  </div>
-
-  <div class="max-w-lg w-full text-center space-y-8 bg-white dark:bg-slate-900/80 p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl backdrop-blur-xl">
+  <div class="max-w-md w-full text-center space-y-6 bg-white dark:bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl backdrop-blur-xl relative">
     
-    <!-- Brand Header -->
-    <a href="../index.html" class="inline-flex items-center gap-3">
-      <div class="w-12 h-12 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-lg">
-        <i data-lucide="wrench" class="w-6 h-6"></i>
-      </div>
-      <span class="text-2xl font-extrabold text-slate-900 dark:text-white">Flow<span class="text-teal-600 dark:text-teal-500">Fix</span></span>
-    </a>
+    <!-- Brand Header & Controls (Theme and RTL inside top right of card) -->
+    <div class="flex items-center justify-between gap-3 pb-3 border-b border-slate-200/60 dark:border-slate-800/60">
+      <a href="../index.html" class="inline-flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md">
+          <i data-lucide="wrench" class="w-5 h-5"></i>
+        </div>
+        <span class="text-xl font-extrabold text-slate-900 dark:text-white">Flow<span class="text-teal-600 dark:text-teal-500">Fix</span></span>
+      </a>
 
-    <div class="space-y-3">
-      <span class="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-700 dark:text-teal-300 font-bold text-xs uppercase tracking-widest">Under Construction</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">We Are Upgrading Our Digital System</h1>
-      <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+      <!-- Theme & RTL Toggles Right inside Card -->
+      <div class="flex items-center gap-1.5">
+        <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm" aria-label="Toggle theme">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-slate-600"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm" aria-label="Toggle LTR/RTL layout direction" title="Toggle Layout Direction (LTR/RTL)">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="space-y-2.5">
+      <span class="px-2.5 py-0.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-700 dark:text-teal-300 font-extrabold text-[10px] uppercase tracking-widest inline-block">Under Construction</span>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">We Are Upgrading Our Digital System</h1>
+      <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
         Our engineers are deploying a real-time GPS technician tracking portal. Emergency dispatch and booking remain fully active by phone!
       </p>
     </div>
 
     <!-- Contact & Phone CTAs -->
-    <div class="p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-4">
+    <div class="p-4 sm:p-5 rounded-2xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-3">
       <p class="text-xs text-slate-700 dark:text-slate-300 font-medium">Need an Emergency Plumber Immediately?</p>
-      <a href="tel:8005550147" class="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-xl transition-all">
+      <a href="tel:8005550147" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
         <i data-lucide="phone-call" class="w-4 h-4"></i>
         <span>Call Dispatch (800) 555-0147</span>
       </a>
     </div>
 
-    <div class="flex items-center justify-center gap-4 text-xs font-bold">
-      <a href="../index.html" class="text-teal-600 dark:text-teal-400 hover:underline">← Home 1 (Classic)</a>
-      <span class="text-slate-400">•</span>
-      <a href="../index-2.html" class="text-amber-500 hover:underline">Home 2 (Premium VIP) →</a>
+    <!-- Back to Home Button -->
+    <div class="flex justify-center pt-1">
+      <a href="../index.html" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-teal-600/20 transition-all active:scale-95">
+        <i data-lucide="arrow-left" class="w-4 h-4 rtl-flip"></i>
+        <span>Back to Home</span>
+      </a>
     </div>
 
-    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
-      <div class="flex items-center justify-center gap-1.5 font-medium">
-        <span>Developed by</span>
-        <span class="font-semibold text-slate-800 dark:text-slate-200">Abhivorn Technologies Pvt. Ltd.</span>
+    <div class="pt-3 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400">
+      <div class="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 text-center font-medium">
+        <span class="whitespace-nowrap">Developed by</span>
+        <span class="font-semibold text-slate-800 dark:text-slate-200 whitespace-nowrap">Abhivorn Technologies Pvt. Ltd.</span>
       </div>
     </div>
 

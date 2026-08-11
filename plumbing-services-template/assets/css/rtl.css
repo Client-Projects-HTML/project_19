@@ -1,7 +1,17 @@
 /* FlowFix Plumbing - RTL Direction Overrides */
-html[dir="rtl"] {
+html[dir="rtl"],
+html[dir="rtl"] body {
   direction: rtl;
   text-align: right;
+}
+
+/* Force text-align: right for centered or left-aligned utility classes in RTL */
+html[dir="rtl"] .text-center,
+html[dir="rtl"] .text-left,
+html[dir="rtl"] .sm\:text-center,
+html[dir="rtl"] .md\:text-center,
+html[dir="rtl"] .lg\:text-center {
+  text-align: right !important;
 }
 
 html[dir="rtl"] .rtl-flip {
@@ -9,8 +19,26 @@ html[dir="rtl"] .rtl-flip {
 }
 
 html[dir="rtl"] .floating-call-btn {
-  right: auto;
-  left: 1.5rem;
+  right: auto !important;
+  left: 1rem !important;
+  bottom: 5rem !important;
+}
+
+@media (min-width: 640px) {
+  html[dir="rtl"] .floating-call-btn {
+    left: 1.5rem !important;
+    bottom: 5.75rem !important;
+  }
+}
+
+html[dir="rtl"] #back-to-top-btn {
+  right: auto !important;
+  left: 1rem !important;
+}
+@media (min-width: 640px) {
+  html[dir="rtl"] #back-to-top-btn {
+    left: 1.5rem !important;
+  }
 }
 
 html[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -41,3 +69,4 @@ html[dir="rtl"] .mr-auto {
   margin-right: 0;
   margin-left: auto;
 }
+
