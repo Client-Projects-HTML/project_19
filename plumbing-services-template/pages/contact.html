@@ -36,7 +36,7 @@
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
     <!-- Emergency Announcement Bar -->
-    <div class="bg-red-600 text-white py-1.5 px-3 text-center text-[10px] sm:text-xs md:text-sm font-semibold leading-tight flex flex-wrap items-center justify-center gap-1 md:gap-2 shadow-inner">
+    <div class="hidden xl:flex bg-red-600 text-white py-1.5 px-3 text-center text-sm font-semibold leading-tight flex-wrap items-center justify-center gap-2 shadow-inner">
       <span class="inline-flex items-center gap-1 shrink-0">
         <span class="inline-block w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
         <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
@@ -173,78 +173,132 @@
       </nav>
     </div>
     <div class="space-y-3 pt-6 border-t border-slate-200 dark:border-slate-800">
-      <a href="tel:8005550147" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-red-600 text-white font-bold text-sm">Emergency Call</a>
       <a href="booking.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-teal-600 text-white font-bold text-sm">Book a Service</a>
     </div>
   </div>
 
   <!-- Contact Main Section -->
   <section class="pt-28 md:pt-36 pb-16 md:pb-24 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 md:space-y-16">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <!-- Contact Info Sidebar (5 Cols) -->
-        <div class="lg:col-span-5 space-y-8">
-          
-          <div class="space-y-3">
-            <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Get In Touch</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">We're Here to Help 24/7</h2>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              Reach out via phone, email, or visit our central headquarters. For immediate plumbing emergencies, call our hotline directly.
-            </p>
+      <!-- 1. Send Us a Message (Contact Form) -->
+      <div class="space-y-6 max-w-4xl mx-auto lg:max-w-none">
+        <!-- Success Container -->
+        <div id="contact-success-message" class="hidden rounded-3xl bg-emerald-50 dark:bg-emerald-950/40 border-2 border-emerald-500 p-8 text-center space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-600 text-white flex items-center justify-center mx-auto">
+            <i data-lucide="check" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Message Sent Successfully!</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            Thank you for writing to FlowFix Plumbing. A representative will contact you shortly.
+          </p>
+        </div>
+
+        <form id="contact-form" class="bg-slate-50 dark:bg-slate-800/40 p-6 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6 shadow-xl" novalidate>
+          <div class="border-b border-slate-200 dark:border-slate-700 pb-4">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Online Inquiry</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+              Send Us a Message
+            </h3>
           </div>
 
-          <!-- Cards -->
-          <div class="space-y-4">
-            
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                <i data-lucide="phone-call" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">24/7 Emergency Line</h4>
-                <a href="tel:8005550147" class="text-lg font-extrabold text-slate-900 dark:text-white hover:text-red-600 transition-colors block mt-0.5">(800) 555-0147</a>
-                <p class="text-xs text-slate-500">Live dispatch operator on call 365 days a year</p>
-              </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="contact-name" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Your Name <span class="text-red-500">*</span></label>
+              <input type="text" id="contact-name" name="name" placeholder="Jane Smith" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-slate-900">
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                <i data-lucide="mail" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">General Email Inquiries</h4>
-                <a href="mailto:service@flowfixplumbing.com" class="text-base font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors block mt-0.5">service@flowfixplumbing.com</a>
-                <p class="text-xs text-slate-500">Response within 2 hours during normal office hours</p>
-              </div>
+            <div>
+              <label for="contact-email" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Email Address <span class="text-red-500">*</span></label>
+              <input type="email" id="contact-email" name="email" placeholder="jane@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-slate-900">
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Headquarters & Shop</h4>
-                <p class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">100 Plumbers Way, Suite 400</p>
-                <p class="text-xs text-slate-500">Metro City, NY 10001</p>
-              </div>
+            <div>
+              <label for="contact-phone" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Phone Number</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="(800) 555-0147" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-slate-900">
             </div>
 
+            <div>
+              <label for="contact-subject" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Subject <span class="text-red-500">*</span></label>
+              <select id="contact-subject" name="subject" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-slate-900">
+                <option value="">-- Select Topic --</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Estimate Request">Estimate Request</option>
+                <option value="Commercial Plumbing">Commercial Plumbing</option>
+                <option value="Feedback">Feedback / Review</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="contact-message" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Message Content <span class="text-red-500">*</span></label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="How can our plumbing team assist you today?" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-slate-900"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md transition-all active:scale-[0.99]">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- 2. Get In Touch / We're Here to Help 24/7 Section -->
+      <div class="space-y-8">
+        <div class="space-y-3 text-center max-w-2xl mx-auto">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">Get In Touch</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">We're Here to Help 24/7</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            Reach out via phone, email, or visit our central headquarters. For immediate plumbing emergencies, call our hotline directly.
+          </p>
+        </div>
+
+        <!-- Info Cards & Business Hours Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center shrink-0 shadow-md">
+              <i data-lucide="phone-call" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">24/7 Emergency Line</h4>
+              <a href="tel:8005550147" class="text-lg font-extrabold text-slate-900 dark:text-white hover:text-red-600 transition-colors block mt-0.5">(800) 555-0147</a>
+              <p class="text-xs text-slate-500 mt-1">Live dispatch operator on call 365 days a year</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">General Email Inquiries</h4>
+              <a href="mailto:service@flowfixplumbing.com" class="text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-teal-600 transition-colors block mt-0.5 break-all">service@flowfixplumbing.com</a>
+              <p class="text-xs text-slate-500 mt-1">Response within 2 hours during office hours</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Headquarters & Shop</h4>
+              <p class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">100 Plumbers Way, Suite 400</p>
+              <p class="text-xs text-slate-500 mt-1">Metro City, NY 10001</p>
+            </div>
           </div>
 
           <!-- Business Hours -->
-          <div class="p-6 rounded-2xl bg-slate-900 text-white space-y-3">
+          <div class="p-6 rounded-2xl bg-slate-900 text-white flex flex-col justify-between space-y-3 shadow-md">
             <h4 class="text-sm font-bold flex items-center gap-2 text-teal-400">
               <i data-lucide="clock" class="w-4 h-4"></i> Operating Hours
             </h4>
             <div class="space-y-1.5 text-xs text-slate-300">
               <div class="flex justify-between">
-                <span>Emergency Dispatch:</span>
+                <span>Emergency:</span>
                 <strong class="text-white">24/7 / 365 Days</strong>
               </div>
               <div class="flex justify-between">
-                <span>Monday - Friday:</span>
+                <span>Mon - Fri:</span>
                 <strong class="text-white">7:00 AM - 8:00 PM</strong>
               </div>
               <div class="flex justify-between">
@@ -253,95 +307,35 @@
               </div>
               <div class="flex justify-between">
                 <span>Sunday:</span>
-                <strong class="text-white">Emergency Dispatch Only</strong>
+                <strong class="text-white">Emergency Only</strong>
               </div>
             </div>
           </div>
 
         </div>
+      </div>
 
-        <!-- Contact Form & Map (7 Cols) -->
-        <div class="lg:col-span-7 space-y-8">
-          
-          <!-- Success Container -->
-          <div id="contact-success-message" class="hidden rounded-3xl bg-emerald-50 dark:bg-emerald-950/40 border-2 border-emerald-500 p-8 text-center space-y-4">
-            <div class="w-14 h-14 rounded-full bg-emerald-600 text-white flex items-center justify-center mx-auto">
-              <i data-lucide="check" class="w-8 h-8"></i>
+      <!-- 3. Embedded Google Map Section -->
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-xl">
+        <div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-inner border border-slate-200 dark:border-slate-800">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2543635164!2d-74.11976373946229!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            class="w-full h-full border-0 filter dark:contrast-125 dark:hue-rotate-180 dark:invert transition-all duration-300" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="FlowFix Plumbing Headquarters Map">
+          </iframe>
+          <div class="absolute bottom-3 left-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Message Sent Successfully!</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-300">
-              Thank you for writing to FlowFix Plumbing. A representative will contact you shortly.
-            </p>
-          </div>
-
-          <form id="contact-form" class="bg-slate-50 dark:bg-slate-800/40 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6 shadow-xl" novalidate>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-4">
-              Send Us a Message
-            </h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label for="contact-name" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Your Name <span class="text-red-500">*</span></label>
-                <input type="text" id="contact-name" name="name" placeholder="Jane Smith" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-              </div>
-
-              <div>
-                <label for="contact-email" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Email Address <span class="text-red-500">*</span></label>
-                <input type="email" id="contact-email" name="email" placeholder="jane@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-              </div>
-
-              <div>
-                <label for="contact-phone" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Phone Number</label>
-                <input type="tel" id="contact-phone" name="phone" placeholder="(800) 555-0147" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-              </div>
-
-              <div>
-                <label for="contact-subject" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Subject <span class="text-red-500">*</span></label>
-                <select id="contact-subject" name="subject" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
-                  <option value="">-- Select Topic --</option>
-                  <option value="General Inquiry">General Inquiry</option>
-                  <option value="Estimate Request">Estimate Request</option>
-                  <option value="Commercial Plumbing">Commercial Plumbing</option>
-                  <option value="Feedback">Feedback / Review</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label for="contact-message" class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">Message Content <span class="text-red-500">*</span></label>
-              <textarea id="contact-message" name="message" rows="4" placeholder="How can our plumbing team assist you today?" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md">
-              Send Message
-            </button>
-          </form>
-
-          <!-- Embedded Google Map -->
-          <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-xl">
-            <div class="relative w-full h-72 rounded-2xl overflow-hidden shadow-inner border border-slate-200 dark:border-slate-800">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2543635164!2d-74.11976373946229!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
-                class="w-full h-full border-0 filter dark:contrast-125 dark:hue-rotate-180 dark:invert transition-all duration-300" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade" 
-                title="FlowFix Plumbing Headquarters Map">
-              </iframe>
-              <div class="absolute bottom-3 left-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                  <i data-lucide="map-pin" class="w-4 h-4"></i>
-                </div>
-                <div class="text-xs">
-                  <p class="font-extrabold text-slate-900 dark:text-white">FlowFix Plumbing HQ</p>
-                  <p class="text-[11px] text-slate-500 dark:text-slate-400">100 Plumbers Way, Suite 400, Metro City, NY 10001</p>
-                </div>
-              </div>
+            <div class="text-xs">
+              <p class="font-extrabold text-slate-900 dark:text-white">FlowFix Plumbing HQ</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">100 Plumbers Way, Suite 400, Metro City, NY 10001</p>
             </div>
           </div>
-
         </div>
-
       </div>
 
     </div>
