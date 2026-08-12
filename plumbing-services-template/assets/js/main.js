@@ -515,7 +515,7 @@ function initFloatingControls() {
   const btn = document.createElement('button');
   btn.id = 'back-to-top-btn';
   btn.setAttribute('aria-label', 'Scroll to top');
-  btn.className = 'fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 p-2.5 sm:p-3 rounded-full bg-slate-900/90 dark:bg-slate-800/90 text-white border border-slate-700 shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-teal-600 dark:hover:bg-teal-600 focus:outline-none';
+  btn.className = 'fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 inline-flex items-center justify-center p-2.5 sm:p-3 rounded-full bg-slate-900/90 dark:bg-slate-800/90 text-white border border-slate-700 shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:bg-teal-600 dark:hover:bg-teal-600 focus:outline-none';
   btn.innerHTML = `<svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>`;
   
   document.body.appendChild(btn);

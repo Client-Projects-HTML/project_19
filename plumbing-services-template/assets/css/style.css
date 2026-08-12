@@ -272,13 +272,43 @@ h6 {
   select,
   #mobile-menu-btn,
   #mobile-menu-close-btn,
-  .theme-toggle-btn,
-  .rtl-toggle-btn,
   .floating-call-btn {
     min-height: 44px;
     min-width: 44px;
     touch-action: manipulation;
   }
+}
+
+/* Center icons inside toggle, menu, and back-to-top buttons with reduced button padding */
+.theme-toggle-btn,
+.rtl-toggle-btn {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  padding: 0.35rem !important;
+  border-radius: 0.5rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  touch-action: manipulation;
+}
+
+.theme-toggle-btn svg,
+.theme-toggle-btn i,
+.rtl-toggle-btn svg,
+.rtl-toggle-btn i {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 !important;
+}
+
+#mobile-menu-btn,
+#mobile-menu-close-btn,
+#back-to-top-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* 2. Reduced Animations on Mobile (< 640px) & Reduced Motion */
@@ -366,5 +396,160 @@ img {
   body>main>section:first-of-type,
   body>article:first-of-type {
     padding-top: max(11.5rem, 184px) !important;
+  }
+}
+
+/* ==========================================================================
+   5. DYNAMIC RESPONSIVE TYPOGRAPHY FOR MOBILE (Small, Medium, Large Mobile)
+   Mobile Small:  < 375px (e.g. iPhone SE, Galaxy Fold, 320px-374px)
+   Mobile Medium: 375px - 479px (e.g. iPhone 12/13/14/15, Pixel 6/7/8)
+   Mobile Large:  480px - 639px (Phablets & Large Mobile Viewports)
+   ========================================================================== */
+
+/* 5a. Mobile Small (< 375px) - Compact & High Legibility Font Scaling */
+@media (max-width: 374px) {
+  html {
+    font-size: 13.5px !important;
+  }
+
+  h1, .text-6xl, .text-5xl, .text-4xl {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2, .text-3xl {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  h3, .text-2xl {
+    font-size: 1.15rem !important;
+    line-height: 1.35 !important;
+  }
+
+  h4, .text-xl {
+    font-size: 1.025rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p, .text-lg, .text-base {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .text-sm {
+    font-size: 0.8rem !important;
+  }
+
+  .text-xs {
+    font-size: 0.725rem !important;
+  }
+
+  /* Adjust header announcement bar & top padding on small mobile */
+  header .text-\[10px\], 
+  header .text-xs {
+    font-size: 0.675rem !important;
+    line-height: 1.2 !important;
+  }
+
+  body>section:first-of-type,
+  body>main>section:first-of-type,
+  body>article:first-of-type {
+    padding-top: max(8.5rem, 136px) !important;
+  }
+}
+
+/* 5b. Mobile Medium (375px - 479px) - Balanced Mobile Font Scaling */
+@media (min-width: 375px) and (max-width: 479px) {
+  html {
+    font-size: 14.5px !important;
+  }
+
+  h1, .text-6xl, .text-5xl, .text-4xl {
+    font-size: 1.95rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2, .text-3xl {
+    font-size: 1.55rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h3, .text-2xl {
+    font-size: 1.28rem !important;
+    line-height: 1.35 !important;
+  }
+
+  h4, .text-xl {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p, .text-lg, .text-base {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .text-sm {
+    font-size: 0.85rem !important;
+  }
+
+  .text-xs {
+    font-size: 0.75rem !important;
+  }
+
+  body>section:first-of-type,
+  body>main>section:first-of-type,
+  body>article:first-of-type {
+    padding-top: max(9.5rem, 152px) !important;
+  }
+}
+
+/* 5c. Mobile Large (480px - 639px) - Scaled Comfort Mobile Text */
+@media (min-width: 480px) and (max-width: 639px) {
+  html {
+    font-size: 15.5px !important;
+  }
+
+  h1, .text-6xl, .text-5xl, .text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h2, .text-3xl {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h3, .text-2xl {
+    font-size: 1.4rem !important;
+    line-height: 1.35 !important;
+  }
+
+  h4, .text-xl {
+    font-size: 1.175rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p, .text-lg, .text-base {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .text-xs {
+    font-size: 0.775rem !important;
+  }
+
+  body>section:first-of-type,
+  body>main>section:first-of-type,
+  body>article:first-of-type {
+    padding-top: max(10.5rem, 168px) !important;
   }
 }
